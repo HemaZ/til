@@ -1,16 +1,16 @@
 # Inspecting Obj files symbols
 
-Symbol is one of the basic terms when talking about object files, linking, and so on. In fact, in C/C++ language, symbol is the corresponding entity of most user-defined variables, function names, mangled with namespace, class/struct/name, and so on. For example, a C/C++ compiler may generate symbols in an object file when people define non-static global variables or non-static functions, which are useful for the linker to decide if different modules (object files, dynamic shared libraries, executables) would share same data or code.
+Symbol is one of the basic terms when talking about object files, linking, and so on. In fact, in C/C++ language, symbol is the corresponding entity of most user-defined variables, function names, mangled with namespace, class/struct/name, and so on. For example, a C/C++ compiler may generate symbols in an object file when people define non-static global variables or non-static functions, which are helpful for the linker to decide if different modules (object files, dynamic shared libraries, executables) would share the same data or code.
 
 ## nm
 
-We can inspect the symbols in object file using `nm` command line tool.
+We can inspect the symbols in the object file using the `nm` command line tool.
 
 ```console
 nm object_file.o | c++filt 
 ```
 
-using `nm` with `c++filt` allow us to demangle c++ names back. 
+using `nm` with `c++filt` allows us to demangle C++ names. 
 
 let's take the following example c++ code
 
@@ -26,7 +26,7 @@ int main(){
     return declaredFunc(true);
 }
 ```
-We can compile this file as object file without linking it (using -c flag). 
+We can compile this file as an object file without linking it (using the -c flag). 
 
 ```console
 g++ -c test.cpp -o test.o
@@ -46,7 +46,7 @@ we should get something similar.
 0000000000000000 d staticVar
 
 ```
-each line reperesents 
+each line represents 
 
 ```
 symbol value    symbol type    symbol name
@@ -64,7 +64,7 @@ Object files are divided into sections, each serving a specific purpose. Common 
 - Data Section: Stores initialized global and static variables.
 - BSS Section: Reserved for uninitialized global and static variables. It doesn't occupy space in the object file but is allocated when the program is loaded into memory.
 
-We will use this info to understand the symbols types below. 
+We will use this info to understand the symbol types below. 
 
 #### T t
 
@@ -76,7 +76,7 @@ example: `main` and `testFunc` in the code above.
 
 #### U
 
-This symbol is undefined and no defination is found in the object file. 
+This symbol is undefined and no definition is found in the object file. 
 
 example: `declaredFunc(bool)` in the code above. 
 
@@ -89,9 +89,9 @@ example: `staticVar` in the code above
 
 ## References
 
-1. first
-2. second
-3. third
+1. [first](https://developer.ibm.com/articles/au-aix-symbol-visibility/)https://developer.ibm.com/articles/au-aix-symbol-visibility/
+2. [second](https://www.geeksforgeeks.org/memory-layout-of-c-program/)https://www.geeksforgeeks.org/memory-layout-of-c-program/
+3. [third](https://linux.die.net/man/1/nm)https://linux.die.net/man/1/nm
 
 
 
