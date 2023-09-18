@@ -76,7 +76,7 @@ example: `main` and `testFunc` in the code above.
 
 #### U
 
-This symbol is undefined and no definition is found in the object file. 
+This symbol is undefined and no definition is found in the object file. This symbol could come from another library during linking. If it still couldn't be found, the linker should throw an error. 
 
 example: `declaredFunc(bool)` in the code above. 
 
