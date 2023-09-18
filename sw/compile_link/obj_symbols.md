@@ -54,6 +54,18 @@ symbol value    symbol type    symbol name
 
 ### Symobl types
 
+The following diagram shows the memory layout of the object file. 
+
+![memory layout](media/memory-layout.jpg)
+
+Object files are divided into sections, each serving a specific purpose. Common sections include:
+
+- Text Section: Contains the machine code (executable instructions) of the program
+- Data Section: Stores initialized global and static variables.
+- BSS Section: Reserved for uninitialized global and static variables. It doesn't occupy space in the object file but is allocated when the program is loaded into memory.
+
+We will use this info to understand the symbols types below. 
+
 #### T t
 
 This symbol is in the object file's .text code section. 
@@ -68,9 +80,18 @@ This symbol is undefined and no defination is found in the object file.
 
 example: `declaredFunc(bool)` in the code above. 
 
+#### D d
+
+The symbol is in the initialized data section. 
+
+example: `staticVar` in the code above
 
 
+## References
 
+1. first
+2. second
+3. third
 
 
 
