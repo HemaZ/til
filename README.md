@@ -5,7 +5,9 @@ Today i learned. This will be my personal 2nd memory. I will write about the stu
 
 ## Software Engineering
 
-### Compiling & Linking
+### Building 
+
+- [Inpsecting object files symbols](sw/building/obj_symbols.md)
 
 
 
