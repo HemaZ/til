@@ -92,6 +92,7 @@ example: `staticVar` in the code above
 1. [first](https://developer.ibm.com/articles/au-aix-symbol-visibility/)https://developer.ibm.com/articles/au-aix-symbol-visibility/
 2. [second](https://www.geeksforgeeks.org/memory-layout-of-c-program/)https://www.geeksforgeeks.org/memory-layout-of-c-program/
 3. [third](https://linux.die.net/man/1/nm)https://linux.die.net/man/1/nm
+4. [What Happens After The Compiler in C++ (How Linking Works)](https://youtu.be/h4s891KVN80?si=cppQf47JKQKauDJH)
 
 
 
